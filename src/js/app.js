@@ -1,7 +1,9 @@
 'use strict';
 
-var WelcomeCtrl = require('./ctrl/welcomeCtrl');
+var sideMenu = require('./sideMenu/_module');
 
-var app = angular.module('myApp', []);
-
-app.controller('WelcomeCtrl', ['$scope', WelcomeCtrl]);
+angular.module('myApp', [
+    'ui.router',
+    'ngAnimate',
+    sideMenu
+]);

@@ -5,13 +5,16 @@
     <link rel="stylesheet" href="css/main.css" />
 </head>
 <body ng-controller='WelcomeCtrl'>
-
-<div class="container">
-
+<div class="well">
     <h1>Bolier room</h1>
 
     <p>{{testVar}}</p>
-
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar" ui-view="categories"></div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" ui-view="bookmarks"></div>
+    </div>
 </div>
 
 <script src="vendors/vendors.js"></script>
