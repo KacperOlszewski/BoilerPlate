@@ -32,7 +32,7 @@ server.all('/*', function(req, res) {
 });
 
 
-gulp.task('dev', sync(['clean', 'views', 'vendors', 'css', 'js']), function() { });
+gulp.task('build', sync(['clean', 'views', 'vendors', 'css', 'js']), function() { });
 
 
 gulp.task('js', function() {
@@ -117,4 +117,4 @@ gulp.task('bower', function() {
     return bower();
 });
 
-gulp.task('default', sync(['bower','dev', 'watch']));
+gulp.task('default', sync(['bower','build', 'watch']));
